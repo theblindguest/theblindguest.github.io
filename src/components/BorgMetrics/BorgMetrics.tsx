@@ -72,11 +72,13 @@ const BorgMetrics: React.FC<BorgMetricsProps> = ({ borgMetricsData }) => {
         return (
           <Styled.BorgMetric>
             <Icon />
-            <div>{title}</div>
-            <Styled.QuantityWrapper>
-              <Styled.Quantity>{quantity}</Styled.Quantity>
-              {subText && <Styled.SubText>{subText}</Styled.SubText>}
-            </Styled.QuantityWrapper>
+            <Styled.CopyWrapper>
+              <div>{title}</div>
+              <Styled.QuantityWrapper>
+                <Styled.Quantity>{quantity}</Styled.Quantity>
+                {subText && <Styled.SubText>{subText}</Styled.SubText>}
+              </Styled.QuantityWrapper>
+            </Styled.CopyWrapper>
           </Styled.BorgMetric>
         )
       })}

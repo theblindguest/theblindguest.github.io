@@ -7,7 +7,7 @@ export const Content = styled.div`
 
   > div {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     max-width: 1180px;
     margin: 0 auto;
   }
@@ -19,11 +19,20 @@ export const Heading = styled.h2`
   font-size: 42px;
 `
 
-export const MetricsWrapper = styled.h2`
+export const MetricsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   > div:first-of-type {
-    margin-left: 20px;
+    margin-left: 0;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    > div:first-of-type {
+      margin-left: 20px;
+    }
   }
 `
