@@ -18,7 +18,8 @@ interface EnrichedBorgMetric {
 
 type EnrichedBorgMetrics = EnrichedBorgMetric[]
 
-const getPercentage = (decimalValue: number) => (decimalValue * 100).toFixed(2)
+const getPercentage = (decimalValue: number) =>
+  decimalValue ? (decimalValue * 100).toFixed(2) : ''
 
 const BorgMetrics: React.FC<BorgMetricsProps> = ({ borgMetricsData }) => {
   if (!borgMetricsData) return null
@@ -31,24 +32,24 @@ const BorgMetrics: React.FC<BorgMetricsProps> = ({ borgMetricsData }) => {
     borgInYieldPercentage,
     borgBurnedTokens,
     borgInBubackPoolTokens
-  } = borgMetricsData ?? {}
+  } = borgMetricsData
 
   const enrichedBorgMetrics: EnrichedBorgMetrics = [
     {
       icon: icons.supply,
       title: 'Remaining circulating supply',
-      quantity: circulatingSupplyTokens.toLocaleString()
+      quantity: circulatingSupplyTokens?.toLocaleString()
     },
     {
       icon: icons.diamond,
       title: 'BORG staked',
-      quantity: stakedBorgTokens.toLocaleString(),
+      quantity: stakedBorgTokens?.toLocaleString(),
       subText: `(${getPercentage(stakedBorgPercentage)}% of circulating supply)`
     },
     {
       icon: icons.diamond,
       title: 'BORG in yield',
-      quantity: borgInYieldTokens.toLocaleString(),
+      quantity: borgInYieldTokens?.toLocaleString(),
       subText: `(${getPercentage(
         borgInYieldPercentage
       )}% of circulating supply)`
@@ -56,12 +57,12 @@ const BorgMetrics: React.FC<BorgMetricsProps> = ({ borgMetricsData }) => {
     {
       icon: icons.burned,
       title: 'Circulating supply burned',
-      quantity: borgBurnedTokens.toLocaleString()
+      quantity: borgBurnedTokens?.toLocaleString()
     },
     {
       icon: icons.buyback,
       title: 'BORG in buyback pool',
-      quantity: borgInBubackPoolTokens.toLocaleString()
+      quantity: borgInBubackPoolTokens?.toLocaleString()
     }
   ]
 
