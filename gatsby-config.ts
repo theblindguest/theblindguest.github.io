@@ -19,8 +19,7 @@ const config: GatsbyConfig = {
         }
       }
     }
-  ],
-  pathPrefix: '/theblindguest.github.io'
+  ]
 }
 
 export default config
