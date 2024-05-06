@@ -13,7 +13,7 @@ const HomePage: FC<PageProps> = (): ReactElement => {
   useEffect(() => {
     const fetchData = async () => {
       const fetchBorgMetricsData = await fetch(
-        'https://corsproxy.io/?https://borg-api-techchallenge.swissborg-stage.com/api/borg-stats'
+        'https://borg-api-techchallenge.swissborg-stage.com/api/borg-stats'
       )
       const borgMetricsData = await fetchBorgMetricsData.json()
 
@@ -35,4 +35,19 @@ const HomePage: FC<PageProps> = (): ReactElement => {
 
 export default HomePage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => (
+  <>
+    <title>Home Page</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@swissborg" />
+    <meta name="twitter:title" content="SwissBorg BORG token" />
+    <meta
+      name="twitter:description"
+      content="Making crypto asset management accessible. Discover our app & community: #WeAreSwissBorg"
+    />
+    <meta
+      name="twitter:image"
+      content="https://twitter.com/swissborg/header_photo"
+    ></meta>
+  </>
+)
