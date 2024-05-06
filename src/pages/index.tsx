@@ -37,17 +37,22 @@ export default HomePage
 
 export const Head: HeadFC = () => (
   <>
-    <title>Home Page</title>
+    <title>The SwissBorg Token (BORG)</title>
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@swissborg" />
-    <meta name="twitter:title" content="SwissBorg BORG token" />
+    <meta name="twitter:title" content="The SwissBorg Token (BORG)" />
     <meta
       name="twitter:description"
-      content="Making crypto asset management accessible. Discover our app & community: #WeAreSwissBorg"
+      content="The BORG token offers unique benefits to token holders with premium tiers, early access to investment opportunities, cash back on fees and more."
     />
     <meta
-      name="twitter:image"
-      content="https://twitter.com/swissborg/header_photo"
+      property="og:image"
+      content="https://images.prismic.io/swissborg-website/dad11fe5-dbbc-4d5b-a4ed-01a3837d8376_Opengraph-buy+CHSB-EN.png?auto=compress%2Cformat&amp;fit=max&amp;q=80"
     ></meta>
+    <meta
+      property="og:description"
+      content="The BORG token offers unique benefits to token holders with premium tiers, early access to investment opportunities, cash back on fees and more."
+    ></meta>
+    <meta property="og:title" content="The SwissBorg Token (BORG)"></meta>
   </>
 )
