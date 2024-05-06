@@ -18,7 +18,7 @@ interface EnrichedBorgMetric {
 
 type EnrichedBorgMetrics = EnrichedBorgMetric[]
 
-const getPercentage = (decimalValue: number) =>
+const getPercentage = (decimalValue: number): string =>
   decimalValue ? (decimalValue * 100).toFixed(2) : ''
 
 const BorgMetrics: React.FC<BorgMetricsProps> = ({ borgMetricsData }) => {
